@@ -1,0 +1,13 @@
+<mat-grid-list cols="2" [gutterSize]="1" rowHeight="2:1">
+  <mat-grid-tile>
+    <button mat-button (click)="increment()">+</button>
+    <div [ngStyle]="{ padding: '3px 15px' }">
+      {{ count$ | async }}
+    </div>
+    <button mat-button (click)="decrement()">-</button>
+  </mat-grid-tile>
+
+  <mat-grid-tile>
+    <button mat-button (click)="reset()">Reset</button>
+  </mat-grid-tile>
+</mat-grid-list>
